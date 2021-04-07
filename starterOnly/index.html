@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--je suis le bon fichier-->
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -122,7 +122,7 @@
                   max="99" 
                   required>
               </div>
-              <p class="text-label">Quelles villes ?</p>
+              <p class="text-label">Quelle ville ?</p><!--au singulier en anglais-->
               <div class="formData">
                 <input class="checkbox-input"
                   type="radio"
@@ -150,7 +150,7 @@
                   name="location"
                   value="Seattle"
                 />
-                <label for="location3" class="checkbox-label"><!--class remplacé pas id*/-->
+                <label for="location3" class="checkbox-label">
                   <span class="checkbox-icon"></span>
                   Seattle</label
                 >
@@ -160,7 +160,7 @@
                   name="location"
                   value="Chicago"
                 />
-                <label for="location4" class="checkbox-label"><!--class remplacé pas id*/-->
+                <label for="location4" class="checkbox-label">
                   <span class="checkbox-icon"></span>
                   Chicago</label
                 >
@@ -170,7 +170,7 @@
                   name="location"
                   value="Boston"
                 />
-                <label for="location5" class="checkbox-label"><!--class remplacé pas id*/-->
+                <label for="location5" class="checkbox-label">
                   <span class="checkbox-icon"></span>
                   Boston</label
                 >
@@ -180,7 +180,7 @@
                   name="location"
                   value="Portland"
                 />
-                <label for="location6" id="checkbox-label"><!--class remplacé pas id/-->
+                <label for="location6" class="checkbox-label">
                   <span class="checkbox-icon"></span>
                   Portland</label
                   >
@@ -194,13 +194,13 @@
                   :checked
                   .required
                 />
-                <label for="checkbox1" class="checkbox2-label"><!-- label class n'existe pas ds validateur w3, required déjà mis-->
+                <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2">
-                <label for="checkbox2" id="checkbox2-label">
+                <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Je souhaite être prévenu des prochains évènements.
                 </label>
@@ -208,14 +208,14 @@
               </div>
               <input class="btn-submit"
                 type="submit"
-                name="submit_button"   
+                class="button"  
                 value="C'est parti"
               /><!--class remplacé par name ds input pb validateur w3 ??-->
             </form>
           </div>
           <div class="modal-success">
             <span class="success-text">
-              Votre demande d'inscription a bien été reçue.
+              Votre demande d'inscription a bien été enregistrée.
             </span>
             <input class="btn-submit close"
               type="button"

@@ -1,3 +1,5 @@
+
+/*bon fichier*/
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -7,15 +9,15 @@ function editNav() {
   }
 }
 
-// DOM Elements
+/* DOM Elements*/
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 
-// launch modal event
+// lancer l'événement modal
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// launch modal form
+// lancer le formulaire modal
 function launchModal() {
   modalbg.style.display = "block";
 }
@@ -122,28 +124,7 @@ function form (formData, formConfirmButton) {
     });
   };
 }; 
-/* Voir si necessaire pour activer les boutons?
-// Constructeur de formulaire contextuel
-function PopupForm (form__id, form__bg, button__id) {
-  // Prendre les éléments DOM nécessaires
-  this.id = document.querySelectorAll(form__id);
-  this.button = document.querySelectorAll(button__id);
-  this.bg = document.querySelector(form__bg);
-  // Écoutez un ou plusieurs boutons pour faire apparaître la fenêtre contextuelle
-  this.button.forEach(btn => {
-    btn.addEventListener("click", console.log('click'));
-    });
-  });
-  // faire apparaître le pop-up
-  this.appear = function() {
-    this.bg.style.display = "block";
-  }
-  // faire disparaître le pop up
-  this.disappear = function() {
-    this.bg.style.display = "none";
-  }
-}
-*/
+
 // Constructeur d'élément
 class element {
   constructor(object) {
@@ -237,17 +218,3 @@ class elementCheckbox extends element {
   };
 };
 
-/*selection des boutons radio en JS
-const radioInputUn = document.getElementById('location1')
-const radioInputDeux = document.getElementById('location2')
-const radioInputTrois = document.getElementById('location3')
-const radioInputQuatre = document.getElementById('location4')
-const radioInputCinq = document.getElementById('location5')
-const radioInputSix = document.getElementById('location6')
-
-if((radioInputUn.checked && radioInputDeux && radioInputTrois && radioInputQuatre && radioInputCinq && radioInputSix) == false){
-  console.log("RADIO NE FONCTIONNE PAS")
-  console.log(radioInput.checked)
-  e.preventDefault()
-  return
-}*/
