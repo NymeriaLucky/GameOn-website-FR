@@ -1,5 +1,5 @@
 
-/*bon fichier*/
+/*bon fichier forké*/
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -21,7 +21,6 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
   modalbg.style.display = "block";
 }
-
 
 // Ouvrir le menu sur mobile
 const topbar = document.getElementById("myTopnav");
@@ -125,7 +124,7 @@ function form (formData, formConfirmButton) {
   };
 }; 
 
-// Constructeur d'élément
+/* Constructeur d'élément*/
 class element {
   constructor(object) {
     this.object = object;
@@ -150,7 +149,7 @@ class elementText extends element {
     if(this.object.value.length>=2){
       return true;
     }else {
-      this.displayError('Doit contenir plus de deux caractères.');
+      this.displayError('Doit contenir plus de deux caractères.');/*--MESSAGES D'ERREUR du nom*/
       return false;
     }
   }
@@ -162,7 +161,7 @@ class elementEmail extends element {
     if (re.test(String(this.object.value).toLowerCase())){
       return true;
     }else {
-      this.displayError('Doit être une adresse email valide.');
+      this.displayError('Doit être une adresse email valide.');/*--MESSAGES D'ERREUR email*/
       return false;
     };
   };
@@ -173,7 +172,7 @@ class elementDate extends element {
     if (isNaN(this.object.value)) {
       return true;
     }else {
-      this.displayError('La date n\'est pas valide.');
+      this.displayError('La date n\'est pas valide.');/*--MESSAGES D'ERREUR date*/
       return false;
     };
   };
@@ -184,7 +183,7 @@ class elementNumber extends element {
     if(/^\d+$/.test(String(this.object.value))) {
       return true;
     }else{
-      this.displayError('Doit être un nombre entier.');
+      this.displayError('Doit être un nombre entier.');/*--MESSAGES D'ERREUR du nombre à entrer*/
       return false;
     }
   };
@@ -196,7 +195,7 @@ class elementRadio extends element {
     if(document.querySelectorAll('[name="' + this.object.name + '"]:checked').length > 0) {
       return true;
     }else {
-      this.displayError('Vous devez selectionner une option.');
+      this.displayError('Vous devez selectionner une option.');/*--MESSAGES D'ERREUR de selection bouton radio--*/
       return false;
     };
   };
@@ -209,7 +208,7 @@ class elementCheckbox extends element {
       if (this.object.checked) {
         return true;
       }else {
-        this.displayError('Vous devez accepter les conditions d\'utilisation.');
+        this.displayError('Vous devez accepter les conditions d\'utilisation.');/*message d'erreur, condition requise*/
         return false;
       };
     }else{

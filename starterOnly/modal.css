@@ -119,6 +119,10 @@ img {
   .header-logo img {
     width: 200px;
   }
+
+  .checkbox2-label{
+    margin-top: 3px;
+  }
  
   .topnav a {
     display: none;
@@ -188,7 +192,6 @@ main {
 }
 
 /* Modal form */
-
 .button {
   background: #fe142f;
   margin-top: 0.5em;
@@ -291,13 +294,13 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+/*validation erreur après soumission*/ 
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
-} */
-/*validation*/
+} 
+/*validation directe*/
 input:invalid {
   border: 2px dashed red;
 }

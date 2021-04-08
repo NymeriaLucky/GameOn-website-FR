@@ -1,5 +1,5 @@
-<!DOCTYPE html><!--je suis le bon fichier-->
-<html lang="fr">
+<!DOCTYPE html><!--I am the right one-->
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Reservation</title>
@@ -17,7 +17,6 @@
       <img src="Logo.png" alt="logo">
     </div>
     <div class="main-navbar">
-      
       <a href="#" class="active"><span>Accueil</span></a>
       <a href="#"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
@@ -27,7 +26,7 @@
         <i class="fa fa-bars" id= icon></i>
       </a>
     </div>
-    </div><!--fin top-nav-->
+    </div><!--end top-nav-->
     <main>
       <div class="hero-section">
         <div class="hero-content">
@@ -36,7 +35,7 @@
             de jeux vidéos
           </h1>
           <p class="hero-text">
-            Vous aimez jouer ? <br>Notre prochain évènement gaming est ouvert
+            Vous aimez jouer ?<br>Notre prochain évènement gaming est ouvert
             aux réservations...<br> Places limitées !
           </p>
           <button class="btn-signup modal-btn">
@@ -140,7 +139,7 @@
                   name="location"
                   value="San Francisco"
                 />
-                <label for="location2"class="checkbox-label">
+                <label for="location2" class="checkbox-label">
                   <span class="checkbox-icon"></span>
                   San Francisco</label
                 >
@@ -184,6 +183,16 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                   >
+                  <input class="checkbox-input"
+                  type="radio"
+                  id="location7"
+                  name="location"
+                  value="Portland"
+                />
+                <label for="location7" class="checkbox-label">
+                  <span class="checkbox-icon"></span>
+                  Aucune</label
+                  >
               </div>
 
               <div
@@ -191,10 +200,9 @@
                 <input class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  :checked
-                  .required
-                />
-                <label class="checkbox2-label" for="checkbox1" required>
+                  required
+                /><!--chekeded n'est pas necessaire à cet endroit-->
+                <label for="checkbox1" class="checkbox2-label"><!--required n'est pas accepté par le validateur à cet endroit-->
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -207,10 +215,10 @@
                 <br>
               </div>
               <input class="btn-submit"
-                type="submit"
-                class="button"  
+                type="button"
+                name="submit_button"  
                 value="C'est parti"
-              /><!--class remplacé par name ds input pb validateur w3 ??-->
+              /><!--class remplacé par name ds label pb validateur w3, button remplacé par submit_button??-->
             </form>
           </div>
           <div class="modal-success">
@@ -221,7 +229,7 @@
               type="button"
               name="close_button" 
               value="Fermer" 
-            /><!--class remplacé par name ds input pb validateur w3-->
+            /><!--class remplacé par name ds label pb validateur w3-->
           </div>
         </div>
       </div>
