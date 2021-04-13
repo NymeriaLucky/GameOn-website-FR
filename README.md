@@ -49,12 +49,12 @@ HTML et CSS passés au validateur, les 2 versions de navigateurs et correction d
 dans le css. supprimé un "div" de trop en html pour permettre le bon fonctionnement du formulaire. 
 
 👩‍🎓️J'ai dû retravailler les plus petites versions pour que soit adaptable à tous les écrans comme demandé ci-dessus 
-le site doit êtr responsive. Avec un écran mobile minimum de 320px, on doit pouvoir remplir le modal.
-📱️ bien que la version minimum mise en place sur certains éléments ici est 540px dans le css.
+le site doit être responsive. Avec un écran mobile minimum de 320px, on doit pouvoir remplir le modal.
+📱️ bien que la version minimum mise en place sur certains éléments ici est 540px dans le css.🤷️
 Corection de ce qui est refusé par le validateur et anotation en français. 
 Des erreurs de syntaxe et autres corrigées dans le HTML .
-JS réalisé testé, responsive. Les boutons du main-bar ne sont pas encore reliés à des sources par dles liens mais peuvent
- devenir pleinement opérationnelspar la suite. pur l'instant ils sont réactif au passage de la souris.
+JS réalisé testé, responsive. Les boutons du main-bar ne sont pas encore reliés à des sources par les liens mais peuvent
+ devenir pleinement opérationnels par la suite. pur l'instant ils sont réactif au passage de la souris.
 
 
 AJOUTER CONFIRMATION QUAND ENVOIE RÉUSSI #4
@@ -108,3 +108,9 @@ quand le client n'a participé à aucun autre autre concours, ni à aucun concou
 TODO : FERMER LA MODALE #1
 AJOUTER LA FONCTIONNALITÉ AU BOUTON (X)
 Elle peut fermée en appuyant sur la croix en haut à gauche.
+
+Outil personnels utilisés : Vs code
+                            cours openClassroom, site du zéro, MDN w3 school et recherches sur internet; 
+                            Js fiddle pour tester les codes js;
+Conclusion: document interessant qui mériterait d'être développé dans son intégralité.                            
+                            

@@ -1,5 +1,5 @@
 
-/*bon fichier forké*/
+//Mon fichier forké
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -9,7 +9,7 @@ function editNav() {
   }
 }
 
-/* DOM Elements*/
+// DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
@@ -124,20 +124,20 @@ function form (formData, formConfirmButton) {
   };
 }; 
 
-/* Constructeur d'élément*/
+//Constructeur d'élément
 class element {
   constructor(object) {
     this.object = object;
   };
-  // default isValid () n'est pas censé être utilisé, donc il retourne false
-  // si vous utilisez un nouvel type d'élément du formulaire, vous allez probablement
-  // créer un nouvel elementChild avec un isValid () spécifique
+  /* default isValid () n'est pas censé être utilisé, donc il retourne false
+  **si vous utilisez un nouvel type d'élément du formulaire, vous allez probablement
+  ** créer un nouvel elementChild avec un isValid () spécifique*/
   isValid() {
     console.log("Element: " + this.object + " non reconnu.")
     console.log(this.object.type)
     return false;
   }
-  /*displayError sur un élément non valide*/
+  //displayError sur un élément non valide
   displayError(errorMessage) {
     this.object.parentNode.setAttribute('data-error-visible', 'true');
     this.object.parentNode.setAttribute('data-error', errorMessage);
@@ -149,7 +149,7 @@ class elementText extends element {
     if(this.object.value.length>=2){
       return true;
     }else {
-      this.displayError('Doit contenir plus de deux caractères.');/*--MESSAGES D'ERREUR du nom*/
+      this.displayError('Doit contenir plus de deux caractères.');//--MESSAGES D'ERREUR du nom
       return false;
     }
   }
@@ -161,7 +161,7 @@ class elementEmail extends element {
     if (re.test(String(this.object.value).toLowerCase())){
       return true;
     }else {
-      this.displayError('Doit être une adresse email valide.');/*--MESSAGES D'ERREUR email*/
+      this.displayError('Doit être une adresse email valide.');//--MESSAGES D'ERREUR email
       return false;
     };
   };
@@ -172,7 +172,7 @@ class elementDate extends element {
     if (isNaN(this.object.value)) {
       return true;
     }else {
-      this.displayError('La date n\'est pas valide.');/*--MESSAGES D'ERREUR date*/
+      this.displayError('La date n\'est pas valide.');//--MESSAGES D'ERREUR date
       return false;
     };
   };
@@ -183,7 +183,7 @@ class elementNumber extends element {
     if(/^\d+$/.test(String(this.object.value))) {
       return true;
     }else{
-      this.displayError('Doit être un nombre entier.');/*--MESSAGES D'ERREUR du nombre à entrer*/
+      this.displayError('Doit être un nombre entier.');//--MESSAGES D'ERREUR du nombre à entrer
       return false;
     }
   };
@@ -191,11 +191,11 @@ class elementNumber extends element {
 
 class elementRadio extends element {
   isValid() {
-    /*vérifier si l'un des frères et sœurs (boutons radio avec le même nom) est coché*/
+    //vérifier si l'un des frères et sœurs (boutons radio avec le même nom) est coché
     if(document.querySelectorAll('[name="' + this.object.name + '"]:checked').length > 0) {
       return true;
     }else {
-      this.displayError('Vous devez selectionner une option.');/*--MESSAGES D'ERREUR de selection bouton radio--*/
+      this.displayError('Vous devez selectionner une option.');//--MESSAGES D'ERREUR de selection bouton radio
       return false;
     };
   };
@@ -203,12 +203,12 @@ class elementRadio extends element {
 
 class elementCheckbox extends element {
   isValid() {
-    /* Vérifier uniquement si coché, la chckbox est requise*/
+    // Vérifier uniquement si coché, la chckbox est requise
     if (this.object.required) {
       if (this.object.checked) {
         return true;
       }else {
-        this.displayError('Vous devez accepter les conditions d\'utilisation.');/*message d'erreur, condition requise*/
+        this.displayError('Vous devez accepter les conditions d\'utilisation.');//message d'erreur, condition requise
         return false;
       };
     }else{
