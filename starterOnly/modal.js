@@ -21,7 +21,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
   modalbg.style.display = "block";
 }
-
+//Mon code-------------------------------------------------------------
 // Ouvrir le menu sur mobile
 const topbar = document.getElementById("myTopnav");
 topbar.addEventListener('click', () => {
@@ -77,7 +77,7 @@ function form (formData, formConfirmButton) {
     const elements = [];
     this.data.forEach(object => {
       let el;
-      // créer une instance d'élément en fonction du type d'objet
+      // créer une instance d'élément en fonction du type d'objet vérifié par par l'instruction switch
       switch (object.type) {
         case 'text': 
           el = new elementText(object);
@@ -154,7 +154,7 @@ class elementText extends element {
     }
   }
 }
-
+//validation plus complexe avec regex, vérifier que le texte corresponde à une description que l'on a définie(email)
 class elementEmail extends element {
   isValid() {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -214,6 +214,6 @@ class elementCheckbox extends element {
     }else{
       return true;
     };
-  };
+  }
 };
 
